@@ -1,0 +1,45 @@
+{
+  "name": "stylis-rtl",
+  "version": "1.0.0",
+  "description": "Stylis RTL plugin based on CSSJanus",
+  "main": "dist/stylis-rtl.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --ignore test.js",
+    "flow": "flow check",
+    "prepublish": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FindHotel/stylis-rtl.git"
+  },
+  "keywords": [
+    "rtl",
+    "bidi",
+    "stylis",
+    "emotion",
+    "emotion-js",
+    "css",
+    "preprocessor"
+  ],
+  "author": "Jop de Klein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FindHotel/stylis-rtl/issues"
+  },
+  "homepage": "https://github.com/FindHotel/stylis-rtl#readme",
+  "peerDependencies": {
+    "stylis": "3.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.78.0",
+    "flow-typed": "^2.5.1",
+    "jest": "^23.5.0"
+  },
+  "dependencies": {
+    "cssjanus": "^1.3.0"
+  }
+}
