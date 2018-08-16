@@ -4,7 +4,7 @@ Stylis RTL plugin based on CSSJanus
 
 ## Using with Emotion
 
-```
+```javascript
 import createEmotion from 'create-emotion'
 import stylisRTL from 'stylis-rtl'
 
