@@ -1,6 +1,6 @@
 {
   "name": "stylis-rtl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stylis RTL plugin based on CSSJanus",
   "main": "dist/stylis-rtl.js",
   "scripts": {
