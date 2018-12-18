@@ -1,6 +1,7 @@
 // @flow
 
-import cssjanus from 'cssjanus'
+// https://rtlcss.com/
+const rtlcss = require('rtlcss');
 
 // https://github.com/thysultan/stylis.js#plugins
 const STYLIS_CONTEXTS = {
@@ -10,13 +11,14 @@ const STYLIS_CONTEXTS = {
   PROPERTY: 1,
   SELECTOR_BLOCK: 2,
   AT_RULE: 3
-}
+};
 
-export type StylisContextType = $Values<typeof STYLIS_CONTEXTS>
-export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PROPERTY
+export type StylisContextType = $Values<typeof STYLIS_CONTEXTS>;
+// Using PREPARATION because comments are getting removed at the PROPERTY level.
+export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
 
 export default (context: StylisContextType, content: string): ?string => {
   if (context === STYLIS_PROPERTY_CONTEXT) {
-    return cssjanus.transform(content)
+    return rtlcss.process(content);
   }
-}
+};
