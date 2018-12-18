@@ -1,7 +1,7 @@
 // @flow
 
 // https://rtlcss.com/
-const rtlcss = require('rtlcss');
+import rtlcss from 'rtlcss';
 
 // https://github.com/thysultan/stylis.js#plugins
 const STYLIS_CONTEXTS = {
