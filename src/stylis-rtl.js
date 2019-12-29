@@ -13,7 +13,10 @@ const STYLIS_CONTEXTS = {
 };
 
 export type StylisContextType = $Values<typeof STYLIS_CONTEXTS>;
-export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PROPERTY;
+
+// We need to apply cssjanus as early as possible to capture the noflip directives if used
+// (they are not present at the PROPERTY, SELECTOR_BLOCK, or POST_PROCESS steps)
+export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
 
 function stylisRTLPlugin(context: StylisContextType, content: string): ?string {
   if (context === STYLIS_PROPERTY_CONTEXT) {
